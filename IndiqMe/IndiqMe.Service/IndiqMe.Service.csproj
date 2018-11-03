@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <DebugType>Full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IndiqMe.Domain\IndiqMe.Domain.csproj" />
+    <ProjectReference Include="..\IndiqMe.Helper\IndiqMe.Helper.csproj" />
+    <ProjectReference Include="..\IndiqMe.Repository\IndiqMe.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Email\Templates\ContactUsNotificationTemplate.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Email\Templates\ContactUsTemplate.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
