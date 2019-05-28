@@ -8,6 +8,7 @@ using IndiqMe.Repository.Infra.CrossCutting.Identity.Configurations;
 using IndiqMe.Repository.Infra.CrossCutting.Identity.Interfaces;
 using IndiqMe.Service;
 using IndiqMe.Service.Upload;
+using IndiqMe.Service.RequestRestSharp;
 
 namespace IndiqMe.Api.Configuration
 {
@@ -21,6 +22,8 @@ namespace IndiqMe.Api.Configuration
             services.AddScoped<IContactUsService, ContactUsService>();
             services.AddScoped<IContactUsEmailService, ContactUsEmailService>();
 
+            //requestRestSharp
+            services.AddScoped<IGenericRequest, GenericRequest>();
 
             //repositories
             services.AddScoped<IUserRepository, UserRepository>();
