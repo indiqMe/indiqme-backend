@@ -31,7 +31,8 @@ namespace IndiqMe.Api.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{cityId}")]
+        [HttpGet()]
+        [Route("getcity")]
         public string Get(int cityId)
         {
             var request = _genericRequest.ReturnJson(null, null, Method.GET, $"http://servicodados.ibge.gov.br/api/v1/localidades/estados/{cityId}/municipios");
